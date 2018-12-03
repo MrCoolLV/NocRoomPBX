@@ -7,7 +7,7 @@ function yourprefix123_check_license($licensekey, $localkey='') {
     // -----------------------------------
 
     // Enter the url to your WHMCS installation here
-    $whmcsurl = 'http://billing.nocroom.com/';
+    $whmcsurl = 'https://billing.nocroom.com/';
     // Must match what is specified in the MD5 Hash Verification field
     // of the licensing product that will be used with this check.
     $licensing_secret_key = 'Leased-NRPBX';
