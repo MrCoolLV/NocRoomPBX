@@ -1,29 +1,4 @@
 <?php
-/*
-	FusionPBX
-	Version: MPL 1.1
-
-	The contents of this file are subject to the Mozilla Public License Version
-	1.1 (the "License"); you may not use this file except in compliance with
-	the License. You may obtain a copy of the License at
-	http://www.mozilla.org/MPL/
-
-	Software distributed under the License is distributed on an "AS IS" basis,
-	WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-	for the specific language governing rights and limitations under the
-	License.
-
-	The Original Code is FusionPBX
-
-	The Initial Developer of the Original Code is
-	Mark J Crane <markjcrane@fusionpbx.com>
-	Portions created by the Initial Developer are Copyright (C) 2008-2018
-	the Initial Developer. All Rights Reserved.
-
-	Contributor(s):
-	Mark J Crane <markjcrane@fusionpbx.com>
-	Luis Daniel Lucio Quiroz <dlucio@okay.com.mx>
-*/
 
 //set the include path
 	if (defined('STDIN')) {
@@ -156,7 +131,7 @@
 	}
 
 	// overwrite with domain-specific smtp server settings, if any
-	if ($headers["X-FusionPBX-Domain-UUID"] != '') {
+	if ($headers["X-NocRoomPBX-Domain-UUID"] != '') {
 		$sql = "select domain_setting_subcategory, domain_setting_value ";
 		$sql .= "from v_domain_settings ";
 		$sql .= "where domain_uuid = '".$headers["X-FusionPBX-Domain-UUID"]."' ";
@@ -335,7 +310,7 @@
 		$mailer_error = $mail->ErrorInfo;
 		echo "Mailer Error: ".$mailer_error."\n\n";
 
-		$call_uuid = $headers["X-FusionPBX-Call-UUID"];
+		$call_uuid = $headers["X-NocRoomPBX-Call-UUID"];
 		if ($resend == true) {
 			echo "Retained in v_emails \n";
 		} else {
@@ -357,9 +332,9 @@
 				if ($call_uuid) {
 					$sql .= "'".$call_uuid."', ";
 				}
-				$sql .= "'".$headers["X-FusionPBX-Domain-UUID"]."', ";
+				$sql .= "'".$headers["X-NocRoomPBX-Domain-UUID"]."', ";
 				$sql .= "now(),";
-				$sql .= "'".$headers["X-FusionPBX-Email-Type"]."', ";
+				$sql .= "'".$headers["X-NocRoomPBX-Email-Type"]."', ";
 				$sql .= "'failed', ";
 				$sql .= "'".str_replace("'", "''", $msg)."' ";
 				$sql .= ") ";
