@@ -175,7 +175,7 @@ class authentication {
 $auth = new authentication;
 $auth->username = "user";
 $auth->password = "password";
-$auth->domain_name = "sip.fusionpbx.com";
+$auth->domain_name = "sip.nocroom.com";
 $auth->debug = false;
 $response = $auth->validate();
 print_r($response);
