@@ -1,6 +1,5 @@
 <?php
 
-
 // make sure the PATH_SEPARATOR is defined
 	umask(2);
 	if (!defined("PATH_SEPARATOR")) {
