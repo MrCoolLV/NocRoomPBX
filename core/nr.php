@@ -12,9 +12,9 @@ function yourprefix123_check_license($licensekey, $localkey='') {
     // of the licensing product that will be used with this check.
     $licensing_secret_key = 'Leased-NRPBX';
     // The number of days to wait between performing remote license checks
-    $localkeydays = 10;
+    $localkeydays = 5;
     // The number of days to allow failover for after local key expiry
-    $allowcheckfaildays = 2;
+    $allowcheckfaildays = 1;
 
     // -----------------------------------
     //  -- Do not edit below this line --
