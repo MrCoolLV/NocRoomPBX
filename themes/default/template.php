@@ -43,7 +43,7 @@
 	echo "<link rel='icon' href='".$favicon."'>\n";
 ?>
 
-<title><!--{title}--></title>
+<title>NocRoomPBX</title>
 
 <script language="JavaScript" type="text/javascript" src="<!--{project_path}-->/resources/jquery/jquery-1.11.1.js"></script>
 <script language="JavaScript" type="text/javascript" src="<!--{project_path}-->/resources/jquery/jquery.autosize.input.js"></script>
@@ -551,7 +551,7 @@
 				<!--{body}-->
 			</div>
 			<div id='footer'>
-				<span class='footer'><?php echo (isset($_SESSION['theme']['footer']['text'])) ? $_SESSION['theme']['footer']['text'] : "&copy; ".$text['theme-label-copyright']." 2008 - ".date("Y")." <a href='http://www.fusionpbx.com' class='footer' target='_blank'>fusionpbx.com</a> ".$text['theme-label-all_rights_reserved']; ?></span>
+				<span class='footer'><?php echo (isset($_SESSION['theme']['footer']['text'])) ? $_SESSION['theme']['footer']['text'] : "&copy; ".$text['theme-label-copyright']." 2008 - ".date("Y")." <a href='https://nocroom.com/datacenter/pbx/' class='footer' target='_blank'>nocroom.com</a> ".$text['theme-label-all_rights_reserved']; ?></span>
 			</div>
 		</div>
 
@@ -568,7 +568,7 @@
 			<!--{body}-->
 		</div>
 		<div id='footer_login'>
-			<span class='footer'><?php echo (isset($_SESSION['theme']['footer']['text'])) ? $_SESSION['theme']['footer']['text'] : "&copy; ".$text['theme-label-copyright']." 2008 - ".date("Y")." <a href='http://www.fusionpbx.com' class='footer' target='_blank'>fusionpbx.com</a> ".$text['theme-label-all_rights_reserved']; ?></span>
+			<span class='footer'><?php echo (isset($_SESSION['theme']['footer']['text'])) ? $_SESSION['theme']['footer']['text'] : "&copy; ".$text['theme-label-copyright']." 2008 - ".date("Y")." <a href='https://nocroom.com/datacenter/pbx/' class='footer' target='_blank'>nocroom.com</a> ".$text['theme-label-all_rights_reserved']; ?></span>
 		</div>
 		<?php
 		unset($_SESSION['background_image']);
