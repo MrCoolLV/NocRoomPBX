@@ -1,7 +1,7 @@
 From: "${voicemail_caller_id_name}" <${voicemail_caller_id_number}@${voicemail_domain}>
 Date: ${RFC2822_DATE}
 To: <${voicemail_notify_email}>
-Subject: Voicemail from "${voicemail_caller_id_name}" <${voicemail_caller_id_number}> ${voicemail_message_len}
+Subject: NRPBX Alert Voicemail from "${voicemail_caller_id_name}" <${voicemail_caller_id_number}> ${voicemail_message_len}
 X-Priority: ${voicemail_priority}
 X-Mailer: FreeSWITCH
 
@@ -26,7 +26,7 @@ Content-Transfer-Encoding: 7bit
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Voicemail from "${voicemail_caller_id_name}" <${voicemail_caller_id_number}> ${voicemail_message_len}</title>
+<title>NRPBX Alert Voicemail from "${voicemail_caller_id_name}" <${voicemail_caller_id_number}> ${voicemail_message_len}</title>
 <meta content="text/html; charset=iso-8859-1" http-equiv="content-type"/>
 </head>
 <body>
@@ -37,8 +37,8 @@ Content-Transfer-Encoding: 7bit
 Created: ${voicemail_time}<br>
 Duration: ${voicemail_message_len}<br>
 Account: ${voicemail_account}@${voicemail_domain}<br>
-</font>
-
+</font><br><br>
+web: https://nocroom.com/datacenter/pbx/
 </body>
 </html>
 --000XXX000--
