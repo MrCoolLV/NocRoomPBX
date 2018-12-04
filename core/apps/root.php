@@ -62,8 +62,8 @@
 	$_SERVER["DOCUMENT_ROOT"]   = realpath($_SERVER["DOCUMENT_ROOT"]);
 // try to detect if a project path is being used
 	if (!defined('PROJECT_PATH')) {
-		if (is_dir($_SERVER["DOCUMENT_ROOT"]. '/fusionpbx')) {
-			define('PROJECT_PATH', '/fusionpbx');
+		if (is_dir($_SERVER["DOCUMENT_ROOT"]. '/nocroompbx')) {
+			define('PROJECT_PATH', '/nocroompbx');
 		} elseif (file_exists($_SERVER["DOCUMENT_ROOT"]. '/project_root.php')) {
 			define('PROJECT_PATH', '');
 		} else {
