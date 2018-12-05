@@ -18,10 +18,10 @@
 		//move config.php from the includes to resources directory.
 		rename($_SERVER["PROJECT_ROOT"]."/includes/config.php", $_SERVER["PROJECT_ROOT"]."/resources/config.php");
 	}
-	else if (file_exists("/etc/fusionpbx/config.php")){
+	else if (file_exists("/etc/nocroompbx/config.php")){
 		//linux
 	}
-	else if (file_exists("/usr/local/etc/fusionpbx/config.php")){
+	else if (file_exists("/usr/local/etc/nocroompbx/config.php")){
 		//bsd
 	}
 	else {
