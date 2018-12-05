@@ -87,10 +87,10 @@
 	if (file_exists($_SERVER["PROJECT_ROOT"]."/resources/config.php")) {
 		echo "access denied";
 		exit;
-	} elseif (file_exists("/etc/fusionpbx/config.php")) {
+	} elseif (file_exists("/etc/nocroompbx/config.php")) {
 		echo "access denied";
 		exit;
-	} elseif (file_exists("/usr/local/etc/fusionpbx/config.php")) {
+	} elseif (file_exists("/usr/local/etc/nocroompbx/config.php")) {
 		echo "access denied";
 		exit;
 	}
@@ -298,7 +298,7 @@
 				require_once "resources/classes/global_settings.php";
 				$global_settings = new global_settings($detect_switch, $domain_name);
 				if(is_null($global_settings)){ throw new Exception("Error global_settings came back with null"); }
-				require_once "resources/classes/install_fusionpbx.php";
+				require_once "resources/classes/install_nocroompbx.php";
 				$system = new install_fusionpbx($global_settings);
 				$system->admin_username = $admin_username;
 				$system->admin_password = $admin_password;
@@ -320,8 +320,8 @@
 				echo "</pre>\n";
 				echo "<p><b>Failed to install</b><br/>" . $e->getMessage() . "</p>\n";
 				try {
-					require_once "resources/classes/install_fusionpbx.php";
-					$system = new install_fusionpbx($global_settings);
+					require_once "resources/classes/install_nocroompbx.php";
+					$system = new install_nocroompbx($global_settings);
 					$system->remove_config();
 				} catch(Exception $e){
 					echo "<p><b>Failed to remove config:</b> " . $e->getMessage() . "</p>\n";
