@@ -1,28 +1,4 @@
 <?php
-/*
-	FusionPBX
-	Version: MPL 1.1
-
-	The contents of this file are subject to the Mozilla Public License Version
-	1.1 (the "License"); you may not use this file except in compliance with
-	the License. You may obtain a copy of the License at
-	http://www.mozilla.org/MPL/
-
-	Software distributed under the License is distributed on an "AS IS" basis,
-	WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-	for the specific language governing rights and limitations under the
-	License.
-
-	The Original Code is FusionPBX
-
-	The Initial Developer of the Original Code is
-	Mark J Crane <markjcrane@fusionpbx.com>
-	Portions created by the Initial Developer are Copyright (C) 2008-2018
-	the Initial Developer. All Rights Reserved.
-
-	Contributor(s):
-	Mark J Crane <markjcrane@fusionpbx.com>
-*/
 
 //set a timeout
 	set_time_limit(15*60); //15 minutes
@@ -57,7 +33,7 @@
 		$do = $_POST['do'];
 
 		// run source update
-		if ($do["source"] && permission_exists("upgrade_source") && !is_dir("/usr/share/examples/fusionpbx")) {
+		if ($do["source"] && permission_exists("upgrade_source") && !is_dir("/usr/share/examples/nocroompbx")) {
 			$cwd = getcwd();
 			chdir($_SERVER["PROJECT_ROOT"]);
 			exec("git pull 2>&1", $response_source_update);
@@ -136,7 +112,7 @@
 
 	echo "<form name='frm' method='post' action=''>\n";
 
-	if (permission_exists("upgrade_source") && !is_dir("/usr/share/examples/fusionpbx") && is_writeable($_SERVER["PROJECT_ROOT"]."/.git")) {
+	if (permission_exists("upgrade_source") && !is_dir("/usr/share/examples/nocroompbx") && is_writeable($_SERVER["PROJECT_ROOT"]."/.git")) {
 		echo "<table width='100%' border='0' cellpadding='0' cellspacing='0'>\n";
 		echo "<tr>\n";
 		echo "	<td width='30%' class='vncell' style='vertical-align:middle;'>\n";
@@ -154,7 +130,7 @@
 		if (($branch_return_value == 0) && ($commit_return_value == 0)) {
 			echo $text['label-git_branch'].' '.$git_current_branch." \n";
 			//echo $text['label-git_commit'].' '." ";
-			echo "<a href='https://github.com/fusionpbx/fusionpbx/compare/";
+			echo "<a href='https://github.com/nocroom/nocroompbx/compare/";
 			echo $git_current_commit . "..." . "$git_current_branch' target='_blank'> \n";
 			echo $git_current_commit . "</a><br />\n";
 			echo "</a>";
