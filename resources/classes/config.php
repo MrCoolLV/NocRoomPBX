@@ -72,10 +72,10 @@ class config {
 		// find the file
 			if (file_exists($_SERVER["PROJECT_ROOT"]."/resources/config.php")) {
 				$this->config_path = $_SERVER["PROJECT_ROOT"]."/resources/config.php";
-			} elseif (file_exists("/etc/fusionpbx/config.php")) {
-				$this->config_path = "/etc/fusionpbx/config.php";
-			} elseif (file_exists("/usr/local/etc/fusionpbx/config.php")) {
-				$this->config_path = "/usr/local/etc/fusionpbx/config.php";
+			} elseif (file_exists("/etc/nocroompbx/config.php")) {
+				$this->config_path = "/etc/nocroompbx/config.php";
+			} elseif (file_exists("/usr/local/etc/nocroompbx/config.php")) {
+				$this->config_path = "/usr/local/etc/nocroompbx/config.php";
 			}
 			else {
 				$this->config_path = '';
